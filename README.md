@@ -1,1 +1,1 @@
-# Random number game with Go
+# random-game-go

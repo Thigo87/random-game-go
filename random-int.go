@@ -3,11 +3,13 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"strings"
 )
 
 func main() {
 	num := rand.Intn(101)
 	choice := 0
+	playAgain := ""
 	for {
 		fmt.Println("Write your guess:")
 		fmt.Scanln(&choice)
@@ -17,7 +19,13 @@ func main() {
 			fmt.Println("Too low!")
 		} else {
 			fmt.Println("You guessed it!")
-			break
+			fmt.Println("Do you want to play again? Y/N")
+			fmt.Scanln(&playAgain)
+			if strings.ToUpper(playAgain) == "Y" {
+				num = rand.Intn(101)
+			} else {
+				break
+			}
 		}
 	}
 }
