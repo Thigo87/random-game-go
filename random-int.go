@@ -11,7 +11,7 @@ func main() {
 	choice := 0
 	playAgain := ""
 	for {
-		fmt.Println("Write your guess:")
+		fmt.Println("Write your guess: 0-100")
 		fmt.Scanln(&choice)
 		if choice > num {
 			fmt.Println("Too high!")
